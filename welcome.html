@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Page</title>
+  <link rel="stylesheet" href="welcome.css">
+</head>
+<body>
+  
+  <div id="preloader">
+    <div class="loader"></div>
+    <p>Loading...</p>
+  </div>
+
+
+  <div class="overlay" id="content">
+    <h1 class="glow">WELCOME</h1>
+    <p>HELLO Welcome to the page lets know my home town  by seeing the below video </p>
+
+    <div class="video-container">
+  <iframe 
+    src="https://www.youtube.com/embed/q7pv48rWKak"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
+
+    <p class="tagline">HOPE YOU ALL GUYS GUESSED</p>
+    <a href="home.html" class="btn">Home (Next)</a>
+  </div>
+
+  <script>
+
+    window.addEventListener("load", function() {
+      document.getElementById("preloader").style.display = "none";
+      document.getElementById("content").style.display = "block";
+    });
+  </script>
+  <footer>
+    <p>© 2025 | Made by <strong>Chethan Chandu</strong></p>
+  </footer>
+</body>
+</html>

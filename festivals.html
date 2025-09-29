@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Festivals - Chittoor</title>
+  <link rel="stylesheet" href="home.css"> <!-- Base styles -->
+  <link rel="stylesheet" href="festivals.css"> <!-- Carousel-specific styles -->
+</head>
+<body>
+  <header>
+    <h1 class="glow">Festivals of Chittoor</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="culture.html" target="_blank">Culture</a>
+      <a href="economy.html" target="_blank">Economy</a>
+      <a href="places.html" target="_blank">Places to Visit</a>
+      <a href="things.html" target="_blank">Things to Do</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Festival Highlights</h2>
+      <p>
+        Chittoor is not only known for its scenic beauty and temples but also for its rich cultural celebrations. 
+        Festivals here are celebrated with great enthusiasm, devotion, and community gatherings. From traditional Hindu festivals 
+        to famous jatara events, each occasion reflects the soul of Chittoor.
+      </p>
+
+      <!-- Carousel -->
+      <div class="carousel">
+        <img src="https://imgnew.outlookindia.com/uploadimage/library/16_9/16_9_5/IMAGE_1648868831.webp" class="active" alt="Ugadi Festival">
+        <img src="https://img.freepik.com/premium-photo/illustration-greeting-makar-sankranti-festival_945369-28810.jpg" alt="Sankranti Kites">
+        <img src="https://images.news18.com/ibnlive/uploads/2025/08/happy-ganesh-chaturthi-wishes-2025-images-2-2025-08-04bea58dc1a744f1959cb83da1927830-scaled.jpg?impolicy=website&width=0&height=0" alt="Ganesh Chaturthi">
+        <img src="https://www.excelsior.edu/wp-content/uploads/2022/10/CSJ-23-915701_Diwali-Celebration_BLOG_1000x568-1000x568.jpg" alt="Diwali ">
+        <img src="https://images.news18.com/ibnlive/uploads/2022/06/tirumala-tirupati-devasthanams-165487042616x9.jpeg?impolicy=website&width=640&height=360" alt="Tirumala Rathotsavam">
+        <img src="https://4.bp.blogspot.com/-kcvMe6EUams/Vu_axE6P8HI/AAAAAAAAFMY/fbUX1nz3YgIbPgSXrlVjoIOHvApf30mrQ/s1600/Sri-Varasiddhi-Vinayaka-Temple-in-Kanipakam-4.jpg" alt="Kanipakam Vinayaka fairs">
+
+        <!-- Buttons -->
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
+        <!-- Dots -->
+        <div class="dots">
+          <span class="dot active" onclick="currentSlide(0)"></span>
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Matter Section -->
+    <section class="festival-matter">
+      <h2>Major Festivals of Chittoor</h2>
+
+      <h3>✨ Ugadi</h3>
+      <p>
+        Ugadi marks the Telugu New Year and is one of the most important festivals celebrated across Chittoor. 
+        Families prepare special dishes like <em>Ugadi Pachadi</em> and visit temples for blessings.
+      </p>
+
+      <h3>🌾 Sankranti</h3>
+      <p>
+        Sankranti, the harvest festival, is celebrated with kite flying, rangoli competitions, and traditional dances. 
+        Villages around Chittoor come alive with cultural programs during this time.
+      </p>
+
+      <h3>🪔 Deepavali</h3>
+      <p>
+        The festival of lights is celebrated with fireworks, oil lamps, and sweets. 
+        Chittoor homes and temples shine brightly, symbolizing the victory of light over darkness.
+      </p>
+
+      <h3>🙏 Kanipakam Vinayaka Brahmotsavam</h3>
+      <p>
+        One of the most famous events in Chittoor is the *Kanipakam Vinayaka Brahmotsavam*, a grand jatara 
+        dedicated to Lord Ganesha. Devotees from all over Andhra Pradesh and neighboring states participate.
+      </p>
+
+      <h3>🛕 Tirumala Brahmotsavam</h3>
+      <p>
+        The world-famous *Tirumala Brahmotsavam* in Tirupati (part of Chittoor district) attracts millions of devotees. 
+        The chariot processions, rituals, and cultural programs last for nine days.
+      </p>
+
+      <h3>🎉 Gangama jathara-image</h3>
+<p>
+  Along with these major festivals, every village in Chittoor hosts its own <strong>grama jataras</strong> dedicated 
+  to local deities. These include folk dances, rural fairs, and community feasts, keeping traditions alive.
+</p>
+
+<div class="jathara-image">
+  <img src="https://1.bp.blogspot.com/-SbXGeL-85c8/YGQ9KvSRtKI/AAAAAAAAAHM/cpOMuC0Cf1Yle6uhwsLvUXV_MccW-n0EACLcBGAsYHQ/s949/8-76.jpg" alt="Local Jathara Celebration">
+  <img src="https://www.pinkvilla.com/images/2025-01/1458899711_pushpa-2-1.jpg" alt="">
+  <p class="caption">clebrating festival Tradition</p>
+</div>
+    </section>
+  </main>
+
+  <script>
+    let slideIndex = 0;
+    let slides = document.querySelectorAll(".carousel img");
+    let dots = document.querySelectorAll(".dot");
+
+    function showSlide(index) {
+      if (index >= slides.length) slideIndex = 0;
+      if (index < 0) slideIndex = slides.length - 1;
+
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        dots[i].classList.remove("active");
+      });
+
+      slides[slideIndex].classList.add("active");
+      dots[slideIndex].classList.add("active");
+    }
+
+    function changeSlide(n) {
+      slideIndex += n;
+      showSlide(slideIndex);
+    }
+
+    function currentSlide(n) {
+      slideIndex = n;
+      showSlide(slideIndex);
+    }
+
+    // Auto Slide
+    setInterval(() => {
+      slideIndex++;
+      showSlide(slideIndex);
+    }, 4000);
+  </script>
+  <footer>
+    <p>© 2025 | Made by <strong>Chethan Chandu</strong></p>
+  </footer>
+</body>
+</html>
